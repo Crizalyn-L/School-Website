@@ -1,0 +1,383 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ :root {
+            --navy: #001f3f;
+            --navy-contrast: #ffffff;
+            --hover: rgba(255,255,255,0.08);
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: #f5f7fb;
+            color: #111;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--navy);
+            color: var(--navy-contrast);
+            padding: 12px 20px;
+        }
+
+        .navbar .logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--navy-contrast);
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 150ms ease, transform 150ms ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            background: var(--hover);
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        /* simple responsive behavior */
+        @media (max-width: 640px) {
+            .nav-links ul {
+                gap: 10px;
+                font-size: 14px;
+            }
+            .navbar { padding: 10px 12px; }
+            .navbar .logo img { height: 40px; }
+        }
+
+.navbar-brand span {
+    font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;   /* try 0.9rem – 1rem */
+  font-weight: 200;
+}        
+
+.navbar-nav .nav-item {
+  margin-left: 18px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+
+.welcome-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0b1c2d, #163a5f);
+  color: white;
+  padding: 80px 60px;
+}
+
+.hero {
+  min-height: 90vh; 
+  display: flex;
+  align-items: center;
+}
+
+.hero-right {
+  padding-left: 60px;  /* space from text */
+}
+
+.hero-right img {
+  background: rgb(15, 3, 35);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Same background as hero */
+.about-section {
+  background-color: #0b1c2d; /* match hero */
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card container */
+.carousel-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+#carouselExample {
+  height: 500px; /* card height */
+}
+
+#carouselExample .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #carouselExample {
+    height: 320px;
+  }
+}
+
+.custom-control {
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.custom-control:hover {
+  background-color: #f1f1f1;
+}
+
+/* Center arrow icon */
+.custom-control .carousel-control-prev-icon,
+.custom-control .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 1100px;
+
+  /* NEW */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.magazine-section {
+  background-color: #7b1e2b; /* maroon */
+  color: #f5f5f5;
+  padding: 80px 0;
+}
+
+/* Title styling */
+.magazine-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+/* Thin editorial line */
+.magazine-line {
+  width: 80px;
+  height: 4px;
+  background-color: #f1c40f; /* subtle gold accent */
+  margin: 16px 0 40px;
+}
+
+/* Two-column magazine text */
+.magazine-content {
+  column-count: 2;
+  column-gap: 40px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .magazine-content {
+    column-count: 1;
+  }
+
+  .magazine-header h2 {
+    text-align: center;
+  }
+
+  .magazine-line {
+    margin: 16px auto 32px;
+  }
+}
+
+/* Base magazine section already defined */
+.magazine-section {
+  color: #f5f5f5;
+  padding: 80px 0;
+}
+
+/* Shade variations */
+.shade-two {
+  background-color: #24246d; /* slightly brighter maroon */
+}
+
+
+/* Optional: alternate text alignment for visual rhythm */
+.shade-two .magazine-header h2,
+.shade-two .magazine-content {
+  text-align: left;
+}
+
+.shade-three .magazine-header h2,
+.shade-three .magazine-content {
+  text-align: left;
+}
+
+.testimonials-section {
+  background-color: #7b1e2b; 
+  padding: 90px 0;
+}
+
+/* Title */
+.testimonials-section h2 {
+  color: #f4f7fa; /* navy */
+}
+
+/* Cards */
+.testimonial-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Images */
+.testimonial-card img {
+  height: 230px;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+/* Card body */
+.testimonial-card .card-title {
+  font-weight: 600;
+  color: #7b1e2b; /* maroon accent */
+}
+
+/* Footer */
+.testimonial-card .card-footer {
+  background-color: transparent;
+  border-top: none;
+}
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+.faq-section {
+  background-color: #b4bac1; /* soft light blue */
+  padding: 90px 0;
+}
+
+/* Limit accordion width (magazine feel) */
+.faq-section .accordion {
+  max-width: 900px;
+}
+
+/* Accordion buttons */
+.accordion-button {
+  font-weight: 600;
+  color: #0b1c2d; /* navy */
+}
+
+/* Active accordion */
+.accordion-button:not(.collapsed) {
+  background-color: #dbe7f5;
+  color: #0b1c2d;
+}
+
+/* Body text */
+.accordion-body {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Scroll offset for sticky navbar */
+#faq {
+  scroll-margin-top: 80px;
+}
+.footer-custom {
+  background-color: #0b1c2d; /* navy to match navbar */
+}
+
+.footer-custom h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-custom ul {
+  padding-left: 0;
+}
+
+.footer-custom li {
+  margin-bottom: 8px;
+}
+
+.footer-custom a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-custom a:hover {
+  color: #4267B2; /* Facebook blue on hover */
+}
+
+.footer-custom i {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-custom i:hover {
+  transform: scale(1.2);
+  color: #4267B2;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-body input,
+.modal-body select {
+  border-radius: 6px;
+}
